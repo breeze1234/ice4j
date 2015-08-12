@@ -1155,13 +1155,14 @@ public class StunCandidateHarvest
                 }
                 catch (InterruptedException iex)
                 {
+                    /*
+                     * Apart from being the time to send the STUN keep-alive
+                     * message, it could be that we've experienced a spurious
+                     * wake-up or that we've been canceled.
+                     */
+                    return true;
                 }
-                /*
-                 * Apart from being the time to send the STUN keep-alive
-                 * message, it could be that we've experienced a spurious
-                 * wake-up or that we've been canceled.
-                 */
-                return true;
+
             }
         }
 

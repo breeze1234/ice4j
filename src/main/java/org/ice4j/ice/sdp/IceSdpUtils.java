@@ -9,7 +9,7 @@ package org.ice4j.ice.sdp;
 import org.ice4j.*;
 import org.ice4j.ice.*;
 
-import javax.sdp.*;
+import com.sqrsystems.sqrsip.sdp.*;
 import java.util.*;
 import java.util.logging.*;
 

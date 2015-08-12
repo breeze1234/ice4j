@@ -7,11 +7,11 @@
 package org.ice4j.ice.sdp;
 
 import gov.nist.core.*;
-import gov.nist.javax.sdp.fields.*;
+import gov.nist.com.sqrsystems.sqrsip.sdp.fields.*;
 import org.ice4j.*;
 import org.ice4j.ice.*;
 
-import javax.sdp.*;
+import com.sqrsystems.sqrsip.sdp.*;
 
 public class CandidateAttribute extends AttributeField
 {
