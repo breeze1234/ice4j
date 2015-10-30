@@ -519,7 +519,7 @@ public class TurnCandidateHarvest
         if (lifetime >= 0)
         {
             setSendKeepAliveMessageInterval(
-                    /* milliseconds */ 1000L * lifetime);
+                    /* milliseconds */ 500L * lifetime);
         }
 
         /*

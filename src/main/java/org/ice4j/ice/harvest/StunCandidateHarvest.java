@@ -1154,14 +1154,12 @@ public class StunCandidateHarvest
                     sendKeepAliveMessageSyncRoot.wait(timeout);
                 }
                 catch (InterruptedException iex)
-                {
+                {}
+                // sendKeepAliveMessageInterval may have changed while executing wait()
+                if (sendKeepAliveMessageInterval == SEND_KEEP_ALIVE_MESSAGE_INTERVAL_NOT_SPECIFIED) {
+                    return false;
                 }
-                /*
-                 * Apart from being the time to send the STUN keep-alive
-                 * message, it could be that we've experienced a spurious
-                 * wake-up or that we've been canceled.
-                 */
-                return true;
+
             }
         }
 
@@ -1366,8 +1364,9 @@ public class StunCandidateHarvest
                         != SEND_KEEP_ALIVE_MESSAGE_INTERVAL_NOT_SPECIFIED)
                     createSendKeepAliveMessageThread();
             }
-            else
+            else {
                 sendKeepAliveMessageSyncRoot.notify();
+            }
         }
     }
 

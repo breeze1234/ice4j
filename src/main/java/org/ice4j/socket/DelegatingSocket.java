@@ -218,10 +218,7 @@ public class DelegatingSocket
             // UDP packets sent over TCP are to be framed. As a temporary fix,
             // do not treat the sockets of DelegatingSocketChannel as
             // DelegatingSockets.
-            if (channel instanceof BaseDelegatingSocketChannel)
-                delegateAsDelegatingSocket = null;
-            else
-                delegateAsDelegatingSocket = (DelegatingSocket) delegate;
+            delegateAsDelegatingSocket = (DelegatingSocket) delegate;
         }
         else
         {
