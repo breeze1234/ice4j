@@ -1,3 +1,5 @@
+<p>This library has been forked from the original repository and modified by SQR Systems Ltd. A few compatibility issues with Android and other minor bugs have been fixed.</p>
+
 <table width='70%' align='justify' border='0'>
 <tr>
 <td width='15px' align='center' valign='top'>
@@ -30,8 +32,6 @@ Javadocs for the ice4j API are <a href='http://dev.jitsi.org/ice4j/javadoc/'>ava
 </td>
 <td align='justify'>
 Work on this project is graciously funded by the <a href='http://nlnet.nl'>NLnet Foundation</a>. Thank you!<br>
-This library has been forked from the original repository and modified by SQR Systems Ltd. <br>
-
 </td>
 </tr>
 </table>
